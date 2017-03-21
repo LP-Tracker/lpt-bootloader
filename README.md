@@ -9,9 +9,9 @@ Copyright (c) 2017 Wyatt Calandro
 License is available in LICENSE
 
 ## LP-Tracker Subsystems
-LP-Tracker is made up of 3 uderlying subsystems that work together to launch and maintain the application
+LP-Tracker is made up of 3 underlying subsystems that work together to launch and maintain the application
 
-1. [The Bootloader](https://github.com/LP-Tracker/lpt-bootloader) which launches the appliation and handles crashes and version management
+1. [The Bootloader](https://github.com/LP-Tracker/lpt-bootloader) which launches the application and handles crashes and version management
 2. [The Updater](https://github.com/LP-Tracker/lpt-updater) which updates application files
 3. [The Application](https://github.com/LP-Tracker/lpt-application) which is what the user actually sees
 

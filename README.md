@@ -1,5 +1,5 @@
 LPT-Bootloader
-==========
+==============
 
 The bootloader subsystem for LP-Tracker
 

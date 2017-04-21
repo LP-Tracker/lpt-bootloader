@@ -1,0 +1,19 @@
+{
+  "name": "lpt-bootloader",
+  "version": "0.0.0",
+  "description": "The bootloader for LP-Tracker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LP-Tracker/lpt-bootloader.git"
+  },
+  "author": "Wyatt Calandro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LP-Tracker/lpt-bootloader/issues"
+  },
+  "homepage": "https://github.com/LP-Tracker/lpt-bootloader#readme"
+}

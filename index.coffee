@@ -24,6 +24,7 @@ app.once 'ready', ->
           console.log "New Updater Version Detected!"
           console.log "Current Version: #{updaterVersion}"
           console.log "New Version: #{releaseVersion}"
+          return (require '../../updater/latest/index').updateUpdater body.tag_name
         else
           console.log "Updater up to date (v#{updaterVersion})"
           client.get '/repos/LP-Tracker/lpt-application/releases/latest', {}, (err, status, body, headers) ->
@@ -32,6 +33,7 @@ app.once 'ready', ->
               console.log "New Application Version Detected!"
               console.log "Current Version: #{applicationVersion}"
               console.log "New Version: #{releaseVersion}"
+              return (require '../../updater/latest/index').updateApplication body.tag_name
             else
               console.log "Application up to date (v#{bootloaderVersion})"
               require "../../application/latest/index"

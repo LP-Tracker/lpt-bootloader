@@ -8,12 +8,14 @@ github = require 'octonode'
 cs = require 'compare-semver'
 client = github.client()
 app.once 'ready', ->
+  if process.env.NODE_ENV is "development" then return require "../../application/latest/index"
   client.get '/repos/LP-Tracker/lpt-bootloader/releases/latest', {}, (err, status, body, headers) ->
     releaseVersion = body.tag_name.replace 'v', ''
     if cs.gt releaseVersion, [bootloaderVersion]
       console.log "New Bootloader Version Detected!"
       console.log "Current Version: #{bootloaderVersion}"
       console.log "New Version: #{releaseVersion}"
+      return (require '../../updater/latest/index').updateBootloader body.tag_name
     else
       console.log "Bootloader up to date (v#{bootloaderVersion})"
       client.get '/repos/LP-Tracker/lpt-updater/releases/latest', {}, (err, status, body, headers) ->

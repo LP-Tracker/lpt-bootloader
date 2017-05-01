@@ -35,5 +35,5 @@ app.once 'ready', ->
               console.log "New Version: #{releaseVersion}"
               return (require '../../updater/latest/index').updateApplication body.tag_name
             else
-              console.log "Application up to date (v#{bootloaderVersion})"
+              console.log "Application up to date (v#{applicationVersion})"
               require "../../application/latest/index"

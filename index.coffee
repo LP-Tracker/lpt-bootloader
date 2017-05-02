@@ -36,4 +36,6 @@ app.once 'ready', ->
               return (require '../../updater/latest/index').updateApplication body.tag_name
             else
               console.log "Application up to date (v#{applicationVersion})"
+              app.on 'window-all-closed', ->
+                app.quit()
               require "../../application/latest/index"

@@ -41,6 +41,7 @@ checkUpdater = (cb) ->
         return (require '../../updater/latest/index').updateUpdater body.tag_name
       else
         console.log "Updater up to date (v#{updaterVersion})"
+        cb()
     else
       console.log "Unable to get updater release version info, skipping...."
       cb()
